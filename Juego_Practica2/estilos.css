@@ -1,0 +1,109 @@
+header {
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    color: white;
+}
+
+header img {
+    margin-right: 10px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#cronometro {
+    font-size: 1.5em;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.numero {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.numero:hover {
+    background-color: #45a049;
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+.resaltado {
+    background-color: #089817;
+}
+
+body.dark-mode .numero {
+    border: 1px solid #3fa046;
+    background-color: #3fa046;
+    color: black;
+}
+
+#botones {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#reiniciar,
+#modoOscuro {
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-weight: bolder;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
